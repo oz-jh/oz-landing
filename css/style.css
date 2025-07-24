@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: linear-gradient(120deg, #040007 0%, #841df1 45%, #100020 100%);
   font-family: "Pretendard", "Noto Sans KR", sans-serif;
@@ -468,6 +471,69 @@ footer {
   padding: 30px 0;
 }
 
+/* Dot Navigation */
+.dot-nav {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.dot-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dot-nav li {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.dot-nav a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: background-color 0.3s, width 0.3s, height 0.3s, padding 0.3s;
+  /* 클릭 영역을 넓게 유지하면서 점 크기를 명확하게 지정합니다. */
+  padding: 5px;
+  background-clip: content-box;
+}
+
+.dot-label {
+  color: #fff;
+  background-color: rgba(25, 0, 37, 0.85);
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-right: 15px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+
+.dot-nav li:hover a,
+.dot-nav a.active {
+  background-color: #fff;
+  width: 16px;
+  height: 16px;
+  padding: 3px; /* (12px + 2*5px - 16px) / 2 = 3px */
+}
+
+/* li에 마우스를 올리면 라벨이 나타납니다. */
+.dot-nav li:hover .dot-label {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
 @media (max-width: 768px) {
   html,
   body {
@@ -637,5 +703,15 @@ footer {
     justify-content: center;
     gap: 1rem;
     margin-bottom: 4rem;
+  }
+
+  /* 모바일 닷 네비게이션 */
+  .dot-nav {
+    padding: 10px;
+  }
+
+  /* 모바일에서는 닷 라벨 숨김 */
+  .dot-label {
+    display: none;
   }
 }

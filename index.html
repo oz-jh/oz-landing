@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- 닷 네비게이션 -->
+    <nav class="dot-nav">
+      <ul>
+        <!-- prettier-ignore -->
+        <li><span class="dot-label">포즈팝</span><a href="#hero" class="active"></a></li>
+        <!-- prettier-ignore -->
+        <li><span class="dot-label">주요기능</span><a href="#features"></a></li>
+        <!-- prettier-ignore -->
+        <li><span class="dot-label">챌린지</span><a href="#challenge"></a></li>
+        <!-- prettier-ignore -->
+        <li><span class="dot-label">인기 템플릿</span><a href="#templates"></a></li>
+        <!-- prettier-ignore -->
+        <li><span class="dot-label">사용자 후기</span><a href="#reviews"></a></li>
+        <!-- prettier-ignore -->
+        <li><span class="dot-label">다운로드</span><a href="#download"></a></li>
+      </ul>
+    </nav>
     <!-- 헤더 -->
     <header>
       <div class="logo"><img src="images/posepop_logo.png" /></div>
@@ -19,7 +36,7 @@
       </nav>
     </header>
     <!-- Hero (메인 타이틀 영역) -->
-    <section class="hero basic">
+    <section id="hero" class="hero basic">
       <div class="hero-title">
         케이팝 스타의<br />
         <span class="point">포즈</span>를 <br />따라해보세요
@@ -39,7 +56,7 @@
     </section>
 
     <!-- 특별한 기능들 -->
-    <section class="features-section">
+    <section id="features" class="features-section">
       <div class="title">포즈팝의 특별한 기능들</div>
       <div class="desc">
         인스타그램처럼 즐기는 소셜 경험에 케이팝 포즈의 재미를 더했습니다.
@@ -85,7 +102,7 @@
     </section>
 
     <!-- 이번 주 챌린지 -->
-    <section class="challenge-section">
+    <section id="challenge" class="challenge-section">
       <div class="title">이번 주 챌린지</div>
       <div class="desc">지금 가장 핫한 포즈 챌린지에 참여해 보세요!</div>
       <div class="challenge-wrap">
@@ -111,7 +128,7 @@
     </section>
 
     <!-- 인기 포즈 템플릿 -->
-    <section class="templates-section">
+    <section id="templates" class="templates-section">
       <div class="title">인기 포즈 템플릿</div>
       <div class="desc">
         가장 인기있는 케이팝 스타들의 시그니처 포즈를 만나보세요!
@@ -149,7 +166,7 @@
     </section>
 
     <!-- 유저 후기 -->
-    <section class="reviews-section">
+    <section id="reviews" class="reviews-section">
       <div class="title">포즈팝 유저들의 이야기</div>
       <div class="desc">이미 수많은 케이팝 팬들이 포즈팝과 함께하고 있어요</div>
 
@@ -185,7 +202,7 @@
     </section>
 
     <!-- 지금 시작하기/다운로드 -->
-    <section class="download-section">
+    <section id="download" class="download-section">
       <div class="title">지금 바로 시작해보세요</div>
       <div class="desc">포즈팝을 다운로드하고 케이팝 스타가 되어보세요</div>
 
@@ -250,5 +267,6 @@
       </div>
       <div class="footer-copy">© 2025 POSEPOP. All rights reserved.</div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
